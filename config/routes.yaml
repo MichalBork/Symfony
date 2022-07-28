@@ -1,3 +1,55 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+
+add_product:
+  path: /product
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\ProductController::createProduct
+
+
+show_product:
+  path: /product/{id}
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\ProductController::show
+
+
+update_product:
+  path: /product/edit/{id}
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\ProductController::update
+
+
+
+
+
+app_json_response:
+  path: /json
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\JsonResponseController::show
+
+
+app_response:
+  path: /json/2
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\JsonResponseController::index
+app_file:
+  path: /file
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\DataFromFileController::index
+app_data_from_form:
+  path: /form
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\DataFromFormController::index
+
+
+app_data_from_formdd:
+  path: /formdd
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\DataFromFormController::showResponse
+
+formValidate:
+  path: /formValidate
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\DataFromFormController::RequestAndValidate
